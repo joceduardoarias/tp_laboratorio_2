@@ -4,10 +4,10 @@ C:\Users\asus\source\repos\Entidades\MiCalculadora\bin\Debug\MiCalculadora.pdb
 C:\Users\asus\source\repos\Entidades\MiCalculadora\bin\Debug\Entidades.dll
 C:\Users\asus\source\repos\Entidades\MiCalculadora\bin\Debug\Entidades.pdb
 C:\Users\asus\source\repos\Entidades\MiCalculadora\obj\Debug\MiCalculadora.csprojAssemblyReference.cache
-C:\Users\asus\source\repos\Entidades\MiCalculadora\obj\Debug\MiCalculadora.Form1.resources
 C:\Users\asus\source\repos\Entidades\MiCalculadora\obj\Debug\MiCalculadora.Properties.Resources.resources
 C:\Users\asus\source\repos\Entidades\MiCalculadora\obj\Debug\MiCalculadora.csproj.GenerateResource.cache
 C:\Users\asus\source\repos\Entidades\MiCalculadora\obj\Debug\MiCalculadora.csproj.CoreCompileInputs.cache
 C:\Users\asus\source\repos\Entidades\MiCalculadora\obj\Debug\MiCalculadora.csproj.CopyComplete
 C:\Users\asus\source\repos\Entidades\MiCalculadora\obj\Debug\MiCalculadora.exe
 C:\Users\asus\source\repos\Entidades\MiCalculadora\obj\Debug\MiCalculadora.pdb
+C:\Users\asus\source\repos\Entidades\MiCalculadora\obj\Debug\MiCalculadora.FormCalculadora.resources
