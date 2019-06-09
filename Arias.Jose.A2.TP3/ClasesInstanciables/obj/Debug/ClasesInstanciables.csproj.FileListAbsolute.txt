@@ -9,3 +9,14 @@ C:\Users\asus\source\repos\Arias.Jose.A2.TP3\ClasesInstanciables\obj\Debug\Clase
 C:\Users\asus\source\repos\Arias.Jose.A2.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.pdb
 C:\Users\asus\source\repos\Arias.Jose.A2.TP3\ClasesInstanciables\bin\Debug\Entidades.dll
 C:\Users\asus\source\repos\Arias.Jose.A2.TP3\ClasesInstanciables\bin\Debug\Entidades.pdb
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\ClasesInstanciables\bin\Debug\ClasesInstanciables.dll
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\ClasesInstanciables\bin\Debug\ClasesInstanciables.pdb
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\ClasesInstanciables\bin\Debug\Entidades.dll
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\ClasesInstanciables\bin\Debug\Excepciones.dll
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\ClasesInstanciables\bin\Debug\Entidades.pdb
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\ClasesInstanciables\bin\Debug\Excepciones.pdb
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.csprojAssemblyReference.cache
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.csproj.CoreCompileInputs.cache
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.csproj.CopyComplete
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.dll
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.pdb

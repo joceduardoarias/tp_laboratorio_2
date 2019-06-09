@@ -7,3 +7,12 @@ C:\Users\asus\source\repos\Arias.Jose.A2.TP3\Entidades\obj\Debug\ClasesAbstracta
 C:\Users\asus\source\repos\Arias.Jose.A2.TP3\Entidades\obj\Debug\ClasesAbstractas.csproj.CopyComplete
 C:\Users\asus\source\repos\Arias.Jose.A2.TP3\Entidades\obj\Debug\Entidades.dll
 C:\Users\asus\source\repos\Arias.Jose.A2.TP3\Entidades\obj\Debug\Entidades.pdb
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\Entidades\bin\Debug\Entidades.dll
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\Entidades\bin\Debug\Entidades.pdb
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\Entidades\bin\Debug\Excepciones.dll
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\Entidades\bin\Debug\Excepciones.pdb
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\Entidades\obj\Debug\ClasesAbstractas.csprojAssemblyReference.cache
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\Entidades\obj\Debug\ClasesAbstractas.csproj.CoreCompileInputs.cache
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\Entidades\obj\Debug\ClasesAbstractas.csproj.CopyComplete
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\Entidades\obj\Debug\Entidades.dll
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\Entidades\obj\Debug\Entidades.pdb

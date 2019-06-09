@@ -39,10 +39,8 @@ namespace ClasesInstanciables
         protected override string MostrarDatos()
         {
             StringBuilder sb = new StringBuilder();
-            foreach (Universidad.EClases item in this.clasesDeDia)
-            {
-                sb.AppendFormat("Clase:{0}", item.ToString());
-            }
+            sb.AppendFormat(base.MostrarDatos());
+            sb.AppendFormat(this.ParticiparEnClase());
             return sb.ToString();
         }
         public static bool operator ==(Profesor i,Universidad.EClases clase)
@@ -65,15 +63,16 @@ namespace ClasesInstanciables
         protected override string ParticiparEnClase()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendFormat("CLASE DEL DIA:{0}", this.clasesDeDia);
+            sb.AppendLine("CLASE DEL DIA: ");
+            foreach (Universidad.EClases item in this.clasesDeDia)
+            {
+                sb.AppendLine(item.ToString());
+            }
             return sb.ToString();
         }
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
-            sb.AppendFormat(this.MostrarDatos());
-            sb.AppendFormat(base.MostrarDatos());
-            return sb.ToString();
+            return this.MostrarDatos();
         }
         #endregion
     }

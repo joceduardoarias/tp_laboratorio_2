@@ -73,10 +73,10 @@ namespace ClasesInstanciables
         public static string MostrarDatos(Universidad uni)
         {
             StringBuilder sb = new StringBuilder();
-
             foreach (Jornada item in uni.jornada)
             {
                 sb.AppendFormat(item.ToString());
+                sb.AppendLine("< ------------------------------------------------------------------- >");
             }
             return sb.ToString();
         }
@@ -139,12 +139,7 @@ namespace ClasesInstanciables
         }
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
-            foreach (Jornada item in this.jornada)
-            {
-                sb.AppendLine(item.ToString());
-            }
-            return sb.ToString();
+            return Universidad.MostrarDatos(this);
         }
         public static Universidad operator +(Universidad g, EClases clase)
         {//primero elegir un prfesor que dicte esa clase

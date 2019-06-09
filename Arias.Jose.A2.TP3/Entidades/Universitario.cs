@@ -37,14 +37,14 @@ namespace EntidadesAbstractas
         protected virtual string MostrarDatos()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendFormat("Legajo:{0}", this.legajo);
-            sb.AppendFormat(base.ToString());
+            sb.AppendLine(base.ToString());
+            sb.AppendLine("Legajo:"+ this.legajo);
             return sb.ToString();
         }
         public static bool operator ==(Universitario pg1,Universitario pg2)
         {
             bool flag = false;
-            if(pg1.legajo == pg2.legajo || pg1.DNI == pg2.DNI /*&& pg1.Equals(pg2)*/)
+            if(pg1.legajo == pg2.legajo || pg1.DNI == pg2.DNI)
             {
                 flag = true;
             }
@@ -55,9 +55,6 @@ namespace EntidadesAbstractas
             return !(pg1 == pg2);
         }
         protected abstract string ParticiparEnClase();
-        
-
-        
         #endregion
     }
 }

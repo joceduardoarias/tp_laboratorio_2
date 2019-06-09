@@ -98,12 +98,14 @@ namespace ClasesInstanciables
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("<------------------------------------------------>");
-            sb.AppendLine("CLASE DE " + this.clase.ToString() + " POR " + this.instructor.ToString());
+            sb.AppendLine("JORNADA: ");
+            sb.AppendLine("CLASE DE " + this.clase + " POR " + this.instructor);
+            sb.AppendLine("ALUMNOS");
             foreach (Alumno item in this.Alumnos)
             {
-                sb.AppendLine(item.ToString());
+                sb.Append(item);
             }
+            sb.AppendLine("<------------------------------------------------>");
             return sb.ToString();
         }
         #endregion

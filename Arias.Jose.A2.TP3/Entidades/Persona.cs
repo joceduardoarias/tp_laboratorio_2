@@ -101,9 +101,9 @@ namespace EntidadesAbstractas
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendFormat("Nombre Completo: {0}, {1}", this.apellido, this.nombre);
-            sb.AppendFormat("\nDNI:{0}", this.dni);
-            sb.AppendFormat("\nNacionalidad:{0}", this.nacionalidad);
+            sb.AppendLine("NOMBRE COMPLETO: "+this.apellido+","+ this.nombre);
+            //sb.AppendLine("DNI:"+ this.dni);
+            sb.AppendLine("Nacionalidad:"+ this.nacionalidad);
             return sb.ToString();
         }
         private int ValidarDni(ENacionalidad nacionalidad, int dato)
@@ -138,21 +138,15 @@ namespace EntidadesAbstractas
         }
         private int ValidarDni(ENacionalidad nacionalidad, string dato)
         {
-
-
             int aux = int.Parse(dato);
             return ValidarDni(nacionalidad, aux);
-
-
         }
         private string ValidarNombreApellido(string datos)
         {
-
             if (Regex.IsMatch(datos, @"^[a-zA-Z]+$"))
             {
                 return datos;
             }
-
             return "";
         }
 
