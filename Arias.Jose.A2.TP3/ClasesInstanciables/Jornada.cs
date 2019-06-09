@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-using System.Xml.Serialization;
+using Archivos;
+using Excepciones;
 namespace ClasesInstanciables
 {
    public class Jornada
@@ -63,16 +64,34 @@ namespace ClasesInstanciables
         #endregion
 
         #region METDOS
-        //flata leer y guardar.
-        public bool GuardarJornada(Jornada jornada)
+        
+        public static bool Guardar(Jornada jornada)
         {
             bool flag = false;
-            
+            try
+            {
+                Texto texto = new Texto();
+                if (texto.Guardar("Jornada", jornada.ToString()))
+                {
+                    flag = true;
+                }
+            }
+            catch (Exception e)
+            {
+
+                throw new ArchivosException(e);
+            }
             return flag;
         } 
-        public string Leer()
+        public static string Leer()
         {
-            return "";
+            string retorno = " ";
+            if (!File.Exists("Jornada"))
+            {
+                Texto texto = new Texto();
+                texto.Leer("Jornada.txt", out retorno);
+            }
+            return retorno;
         }
         public static bool operator ==(Jornada j, Alumno a)
         {

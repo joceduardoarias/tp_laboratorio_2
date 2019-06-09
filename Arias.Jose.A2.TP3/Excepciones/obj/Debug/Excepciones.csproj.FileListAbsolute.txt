@@ -3,3 +3,9 @@ C:\Users\asus\source\repos\Arias.Jose.A2.TP3\Excepciones\bin\Debug\Excepciones.p
 C:\Users\asus\source\repos\Arias.Jose.A2.TP3\Excepciones\obj\Debug\Excepciones.csproj.CoreCompileInputs.cache
 C:\Users\asus\source\repos\Arias.Jose.A2.TP3\Excepciones\obj\Debug\Excepciones.dll
 C:\Users\asus\source\repos\Arias.Jose.A2.TP3\Excepciones\obj\Debug\Excepciones.pdb
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\Excepciones\bin\Debug\Excepciones.dll
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\Excepciones\bin\Debug\Excepciones.pdb
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\Excepciones\obj\Debug\Excepciones.csprojAssemblyReference.cache
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\Excepciones\obj\Debug\Excepciones.csproj.CoreCompileInputs.cache
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\Excepciones\obj\Debug\Excepciones.dll
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\Excepciones\obj\Debug\Excepciones.pdb

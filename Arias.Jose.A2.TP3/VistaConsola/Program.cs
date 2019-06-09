@@ -82,27 +82,27 @@ namespace VistaConsola
             Console.WriteLine(gim.ToString());
             Console.ReadKey();
             Console.Clear();
-            /* try
-             {
-                 Universidad.Guardar(gim);
-                 Console.WriteLine("Archivo de Universidad guardado.");
-             }
-             catch (ArchivosException e)
-             {
-                 Console.WriteLine(e.Message);
-             }
-             try
-             {
-                 int jornada = 0; Jornada.Guardar(gim[jornada]);
-                 Console.WriteLine("Archivo de Jornada {0} guardado.", jornada);
-                 //Console.WriteLine(Jornada.Leer()); } catch (ArchivosException e) { Console.WriteLine(e.Message); }
-                 Console.ReadKey();
-
-             }
-             catch (ArchivosException e)
-             {
-                 Console.WriteLine(e.Message);
-             }*/
+            //try
+            // {
+            //     Universidad.Guardar(gim);
+            //     Console.WriteLine("Archivo de Universidad guardado.");
+            // }
+            // catch (ArchivosException e)
+            // {
+            //     Console.WriteLine(e.Message);
+            // }
+            try
+            {
+                int jornada = 0;
+                Jornada.Guardar(gim[jornada]);
+                Console.WriteLine("Archivo de Jornada {0} guardado.", jornada);
+                //Console.WriteLine(Jornada.Leer()); } catch (ArchivosException e) { Console.WriteLine(e.Message); }
+                Console.ReadKey();
+            }
+            catch (ArchivosException e)
+            {
+                Console.WriteLine(e.Message);
+            }
             Console.ReadKey();
         }
     }

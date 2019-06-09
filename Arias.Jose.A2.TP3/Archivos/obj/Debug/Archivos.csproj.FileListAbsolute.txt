@@ -4,3 +4,12 @@ C:\Users\asus\source\repos\Arias.Jose.A2.TP3\Archivos\obj\Debug\Archivos.csprojA
 C:\Users\asus\source\repos\Arias.Jose.A2.TP3\Archivos\obj\Debug\Archivos.csproj.CoreCompileInputs.cache
 C:\Users\asus\source\repos\Arias.Jose.A2.TP3\Archivos\obj\Debug\Archivos.dll
 C:\Users\asus\source\repos\Arias.Jose.A2.TP3\Archivos\obj\Debug\Archivos.pdb
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\Archivos\bin\Debug\Archivos.dll
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\Archivos\bin\Debug\Archivos.pdb
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\Archivos\bin\Debug\Excepciones.dll
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\Archivos\bin\Debug\Excepciones.pdb
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\Archivos\obj\Debug\Archivos.csprojAssemblyReference.cache
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\Archivos\obj\Debug\Archivos.csproj.CoreCompileInputs.cache
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\Archivos\obj\Debug\Archivos.csproj.CopyComplete
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\Archivos\obj\Debug\Archivos.dll
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\Archivos\obj\Debug\Archivos.pdb

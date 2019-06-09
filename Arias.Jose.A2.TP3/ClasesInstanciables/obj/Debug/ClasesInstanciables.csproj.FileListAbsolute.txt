@@ -20,3 +20,5 @@ C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\ClasesInstanciable
 C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.csproj.CopyComplete
 C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.dll
 C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.pdb
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\ClasesInstanciables\bin\Debug\Archivos.dll
+C:\Users\asus\Documents\C#\tp_laboratorio_2\Arias.Jose.A2.TP3\ClasesInstanciables\bin\Debug\Archivos.pdb
