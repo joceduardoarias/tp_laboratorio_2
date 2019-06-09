@@ -1,0 +1,6 @@
+C:\Users\asus\source\repos\Arias.Jose.A2.TP3\Archivos\bin\Debug\Archivos.dll
+C:\Users\asus\source\repos\Arias.Jose.A2.TP3\Archivos\bin\Debug\Archivos.pdb
+C:\Users\asus\source\repos\Arias.Jose.A2.TP3\Archivos\obj\Debug\Archivos.csprojAssemblyReference.cache
+C:\Users\asus\source\repos\Arias.Jose.A2.TP3\Archivos\obj\Debug\Archivos.csproj.CoreCompileInputs.cache
+C:\Users\asus\source\repos\Arias.Jose.A2.TP3\Archivos\obj\Debug\Archivos.dll
+C:\Users\asus\source\repos\Arias.Jose.A2.TP3\Archivos\obj\Debug\Archivos.pdb

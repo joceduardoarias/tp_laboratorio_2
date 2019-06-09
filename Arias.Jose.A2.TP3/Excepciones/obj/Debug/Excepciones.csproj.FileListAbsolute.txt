@@ -1,0 +1,5 @@
+C:\Users\asus\source\repos\Arias.Jose.A2.TP3\Excepciones\bin\Debug\Excepciones.dll
+C:\Users\asus\source\repos\Arias.Jose.A2.TP3\Excepciones\bin\Debug\Excepciones.pdb
+C:\Users\asus\source\repos\Arias.Jose.A2.TP3\Excepciones\obj\Debug\Excepciones.csproj.CoreCompileInputs.cache
+C:\Users\asus\source\repos\Arias.Jose.A2.TP3\Excepciones\obj\Debug\Excepciones.dll
+C:\Users\asus\source\repos\Arias.Jose.A2.TP3\Excepciones\obj\Debug\Excepciones.pdb
