@@ -64,7 +64,11 @@ namespace ClasesInstanciables
         #endregion
 
         #region METDOS
-        
+        /// <summary>
+        /// Guarda la informacion de una Jornada en un archivo de texto
+        /// </summary>
+        /// <param name="jornada"> Jornada a guardar </param>
+        /// <returns> true si pudo guardarse, false si ocurrio un error</returns>
         public static bool Guardar(Jornada jornada)
         {
             bool flag = false;
@@ -82,7 +86,11 @@ namespace ClasesInstanciables
                 throw new ArchivosException(e);
             }
             return flag;
-        } 
+        }
+        /// <summary>
+        /// Lee la informacion de una Jornada desde un archivo de texto y la trae para ser mostrada
+        /// </summary>
+        /// <returns> Informacion de la Jornada como texto </returns>
         public static string Leer()
         {
             string retorno = " ";
@@ -93,6 +101,12 @@ namespace ClasesInstanciables
             }
             return retorno;
         }
+        /// <summary>
+        /// Una Jornada sera igual a un Alumno si el mismo participa de la clase
+        /// </summary>
+        /// <param name="j"> Jornada  </param>
+        /// <param name="a"> Alumno </param>
+        /// <returns>true si el alumno participa de la clase, false si no participa de esta</returns>
         public static bool operator ==(Jornada j, Alumno a)
         {
             bool flag = false;
@@ -102,10 +116,22 @@ namespace ClasesInstanciables
             }
             return flag;
         }
+        /// <summary>
+        /// Una Jornada sera distinta a un Alumno si el mismo no participa de la clase
+        /// </summary>
+        /// <param name="j"> Jornada </param>
+        /// <param name="a"> Alumno </param>
+        /// <returns>true si el alumno no participa de la clase, false si participa de esta</returns>
         public static bool operator !=(Jornada j, Alumno a)
         {
             return !(j == a);
         }
+        /// <summary>
+        /// Agrega alumnos a la clase de la Jornada
+        /// </summary>
+        /// <param name="j"> Jornada </param>
+        /// <param name="a"> Alumno a agregar </param>
+        /// <returns> Jornada </returns>
         public static Jornada operator +(Jornada j,Alumno a)
         {
           if(j!=a)
@@ -114,6 +140,10 @@ namespace ClasesInstanciables
             }
             return j;
         }
+        /// <summary>
+        /// Muestra los datos de la Jornada
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

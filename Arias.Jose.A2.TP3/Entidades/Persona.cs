@@ -98,6 +98,10 @@ namespace EntidadesAbstractas
         #endregion
 
         #region Metdos
+        /// <summary>
+        /// Método por defecto, devuelte la info de la persona en una cadena
+        /// </summary>
+        /// <returns>info de la persona</returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
@@ -106,6 +110,12 @@ namespace EntidadesAbstractas
             sb.AppendLine("Nacionalidad:"+ this.nacionalidad);
             return sb.ToString();
         }
+        /// <summary>
+        /// Valida que el número de DNI coincida con la nacionalidad de acuerdo a un criterio
+        /// </summary>
+        /// <param name="nacionalidad"></param>
+        /// <param name="dato"></param>
+        /// <returns>Devuelve el número de DNI ya validado, caso contrario tira excepción</returns>
         private int ValidarDni(ENacionalidad nacionalidad, int dato)
         {
             switch (nacionalidad)
@@ -136,11 +146,22 @@ namespace EntidadesAbstractas
             }
             throw new DniInvalidoException();
         }
+        /// <summary>
+        /// Convierte un DNI pasado como string a int. Valida que esté correctamente escrito.
+        /// </summary>
+        /// <param name="nacionalidad">Nacionalidad de la persona.</param>
+        /// <param name="dato">DNI de la persona.</param>
+        /// <returns>DNI valido ó lanza DniInvalidoException caso contrario.</returns>
         private int ValidarDni(ENacionalidad nacionalidad, string dato)
         {
             int aux = int.Parse(dato);
             return ValidarDni(nacionalidad, aux);
         }
+        /// <summary>
+        /// Valida que el nombre solo contenga caracteres validos para un nombre
+        /// </summary>
+        /// <param name="dato">cadena de texto a ser analizada</param>
+        /// <returns> nombre verificado o cadena vacia </returns>
         private string ValidarNombreApellido(string datos)
         {
             if (Regex.IsMatch(datos, @"^[a-zA-Z]+$"))

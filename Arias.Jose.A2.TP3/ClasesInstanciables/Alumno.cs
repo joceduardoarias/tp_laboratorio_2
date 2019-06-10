@@ -36,6 +36,10 @@ namespace ClasesInstanciables
         #endregion
 
         #region METODOS
+        /// <summary>
+        /// Muestra los datos del Universitario
+        /// </summary>
+        /// <returns> Informacion del Universitario </returns>
         protected override string MostrarDatos()
         {
             StringBuilder sb = new StringBuilder();
@@ -44,16 +48,31 @@ namespace ClasesInstanciables
             sb.AppendLine(ParticiparEnClase());
             return sb.ToString();
         }
+        /// <summary>
+        /// Muestra la clase que toma el Alumno
+        /// </summary>
+        /// <returns> retorna la cadena "TOMA CLASE DE " junto al nombre de la clase que toma </returns>
         protected override string ParticiparEnClase()
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("TOMA CLASE DE:"+ this.claseQueToma);
             return sb.ToString();
         }
+        /// <summary>
+        /// Hace publicos los datos del Alumno
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return MostrarDatos();
         }
+        /// <summary>
+        /// Un Alumno será igual a un EClase si toma esa clase y su estado de cuenta no es Deudor.
+        /// Parametro EClase invocado como Universidad.EClases
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="clase"></param>
+        /// <returns></returns>
         public static bool operator ==(Alumno a,Universidad.EClases clase)
         {
             bool flag = false;
@@ -63,6 +82,13 @@ namespace ClasesInstanciables
             }
             return flag;
         }
+        /// <summary>
+        /// Un Alumno será distinto a un EClase sólo si no toma esa clase.
+        /// Parametro EClase invocado como Universidad.EClases
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="clase"></param>
+        /// <returns></returns>
         public static bool operator !=(Alumno a,Universidad.EClases clase)
         {
             return !(a == clase);

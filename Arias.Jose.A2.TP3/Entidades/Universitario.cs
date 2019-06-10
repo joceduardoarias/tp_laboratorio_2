@@ -24,7 +24,11 @@ namespace EntidadesAbstractas
         #endregion
 
         #region METODOS
-        
+        /// <summary>
+        /// Verifica si el objeto es del tipo Universitario
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns>true si es del tipo Universitario, false si no lo es</returns>
         public override bool Equals(object obj)
         {
             bool flag = false;
@@ -35,6 +39,10 @@ namespace EntidadesAbstractas
             }
             return flag;
         }
+        /// <summary>
+        /// Muestra los datos del Universitario
+        /// </summary>
+        /// <returns> Informacion del Universitario </returns>
         protected virtual string MostrarDatos()
         {
             StringBuilder sb = new StringBuilder();
@@ -42,6 +50,12 @@ namespace EntidadesAbstractas
             sb.AppendLine("Legajo:"+ this.legajo);
             return sb.ToString();
         }
+        /// <summary>
+        /// Dos Universitario serán iguales si y sólo si son del mismo Tipo y su Legajo o DNI son iguales.
+        /// </summary>
+        /// <param name="pg1"> Universitario a comparar </param>
+        /// <param name="pg2"> Universitario a comparar </param>
+        /// <returns>True si son iguales, false si no lo son</returns>
         public static bool operator ==(Universitario pg1,Universitario pg2)
         {
             bool flag = false;
@@ -51,10 +65,17 @@ namespace EntidadesAbstractas
             }
             return flag;
         }
+        /// <summary>
+        /// Dos Universitario serán distintos si sus DNI son distintos o sus legajos son distintos.
+        /// </summary>
+        /// <param name="pg1"> Universitario a comparar </param>
+        /// <param name="pg2"> Universitario a comparar </param>
+        /// <returns>True si son distintos, false si no lo son</returns>
         public static bool operator !=(Universitario pg1, Universitario pg2)
         {
             return !(pg1 == pg2);
         }
+
         protected abstract string ParticiparEnClase();
         #endregion
     }

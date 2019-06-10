@@ -30,12 +30,19 @@ namespace ClasesInstanciables
         #endregion
 
         #region METODOS
+        /// <summary>
+        /// Asigna clases a un Profesor
+        /// </summary>
         private void Random()
         {
             this.clasesDeDia.Enqueue((Universidad.EClases)random.Next(0, 3));
             System.Threading.Thread.Sleep(600);
             this.clasesDeDia.Enqueue((Universidad.EClases)random.Next(0, 3));
         }
+        /// <summary>
+        /// Recopila todos los datos de un Profesor
+        /// </summary>
+        /// <returns></returns>
         protected override string MostrarDatos()
         {
             StringBuilder sb = new StringBuilder();
@@ -43,6 +50,12 @@ namespace ClasesInstanciables
             sb.AppendFormat(this.ParticiparEnClase());
             return sb.ToString();
         }
+        /// <summary>
+        /// Un Profesor será igual a un EClase si da esa clase.
+        /// </summary>
+        /// <param name="i"> Profesor </param>
+        /// <param name="clases"> Clase </param>
+        /// <returns>true si da esa clase, false si no la da</returns>
         public static bool operator ==(Profesor i,Universidad.EClases clase)
         {
             bool flag = false;
@@ -56,10 +69,20 @@ namespace ClasesInstanciables
             }
             return flag;
         }
+        /// <summary>
+        /// Un Profesor será distinto a un EClase si no da esa clase.
+        /// </summary>
+        /// <param name="i"> Profesor </param>
+        /// <param name="clases"> Clase </param>
+        /// <returns>true si no da esa clase, false si la da</returns>
         public static bool operator !=(Profesor i, Universidad.EClases clase)
         {
             return !(i == clase);
         }
+        /// <summary>
+        /// Muestra las clases que da un Profesor
+        /// </summary>
+        /// <returns> cadena "CLASES DEL DÍA" junto al nombre de la clases que da </returns>
         protected override string ParticiparEnClase()
         {
             StringBuilder sb = new StringBuilder();
@@ -70,6 +93,10 @@ namespace ClasesInstanciables
             }
             return sb.ToString();
         }
+        /// <summary>
+        /// Hace publicos los datos de un Profesor
+        /// </summary>
+        /// <returns> informacion del Profesor </returns>
         public override string ToString()
         {
             return this.MostrarDatos();

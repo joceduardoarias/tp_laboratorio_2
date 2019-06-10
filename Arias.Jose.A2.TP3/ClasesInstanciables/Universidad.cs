@@ -73,6 +73,11 @@ namespace ClasesInstanciables
         #endregion
 
         #region METODOS
+        /// <summary>
+        /// Serializa los datos de una Universidad en un XML, incluyendo todos los datos de sus Profesores, Alumnos y Jornadas.
+        /// </summary>
+        /// <param name="uni"> Universidad </param>
+        /// <returns> True si puede guardar el archivo </returns>
         public static bool Guardar(Universidad uni)
         {
             bool flag = false;
@@ -91,6 +96,11 @@ namespace ClasesInstanciables
             }
             return flag;
         }
+        /// <summary>
+        /// Recopila datos de una Universidad
+        /// </summary>
+        /// <param name="uni"> Universidad </param>
+        /// <returns></returns>
         public static string MostrarDatos(Universidad uni)
         {
             StringBuilder sb = new StringBuilder();
@@ -101,6 +111,12 @@ namespace ClasesInstanciables
             }
             return sb.ToString();
         }
+        /// <summary>
+        /// Un Universidad será igual a un Alumno si el mismo está inscripto en él.
+        /// </summary>
+        /// <param name="g"> Universidad </param>
+        /// <param name="a"> Alumno </param>
+        /// <returns> true si esta inscripto en la universidad, false si no lo esta</returns>
         public static bool operator ==(Universidad g, Alumno a)
         {
             bool flag = false;
@@ -115,10 +131,22 @@ namespace ClasesInstanciables
             }
             return flag;
         }
+        /// <summary>
+        /// Un Universidad será distinto a un Alumno si el mismo no esta inscripto en él.
+        /// </summary>
+        /// <param name="g"> Universidad </param>
+        /// <param name="a"> Alumno </param>
+        /// <returns> true si no esta inscripto en la universidad, false si lo esta </returns>
         public static bool operator !=(Universidad g, Alumno a)
         {
             return !(g == a);
         }
+        /// <summary>
+        /// Un Universidad será igual a un Profesor si el mismo está dando clases en él.
+        /// </summary>
+        /// <param name="g"> Universidad </param>
+        /// <param name="i"> Profesor </param>
+        /// <returns> true si el profesor da clases alli, false si no las da </returns>
         public static bool operator ==(Universidad g, Profesor i)
         {
             bool flag = false;
@@ -131,10 +159,22 @@ namespace ClasesInstanciables
             }
             return flag;
         }
+        /// <summary>
+        /// Un Universidad será igual a un Profesor si el mismo no está dando clases en él.
+        /// </summary>
+        /// <param name="g"> Universidad </param>
+        /// <param name="i"> Profesor </param>
+        /// <returns> true si el profesor no da clases alli, false si las da  </returns>
         public static bool operator !=(Universidad g, Profesor i)
         {
             return !(g == i);
         }
+        /// <summary>
+        /// Retorna el primer Profesor capaz de dar esa clase.
+        /// </summary>
+        /// <param name="u"> Universidad </param>
+        /// <param name="clase"> Clase </param>
+        /// <returns> Profesor capaz de dar la clase </returns>
         public static Profesor operator ==(Universidad u, EClases clase)
         {
 
@@ -147,6 +187,12 @@ namespace ClasesInstanciables
             }
             throw new SinProfesorException();
         }
+        /// <summary>
+        /// Retorna el primer Profesor que no pueda dar esa clase.
+        /// </summary>
+        /// <param name="u"> Universidad </param>
+        /// <param name="clase"> Clase </param>
+        /// <returns> Profesor que no da la clase </returns>
         public static Profesor operator !=(Universidad u, EClases clase)
         {
             foreach (Profesor item in u.Instructores)
@@ -158,10 +204,20 @@ namespace ClasesInstanciables
             }
             throw new SinProfesorException();
         }
+        /// <summary>
+        /// Hace publicos los datos de una Universidad
+        /// </summary>
+        /// <returns>datos de la Universidad</returns>
         public override string ToString()
         {
             return Universidad.MostrarDatos(this);
         }
+        /// <summary>
+        /// Agrega una clase con su respectiva jornada y alumnos que la cursan
+        /// </summary>
+        /// <param name="g"> Universidad </param>
+        /// <param name="clase"> Clase </param>
+        /// <returns> Universidad </returns>
         public static Universidad operator +(Universidad g, EClases clase)
         {//primero elegir un prfesor que dicte esa clase
                 
@@ -189,6 +245,12 @@ namespace ClasesInstanciables
             }
             return g;
         }
+        /// <summary>
+        /// Agrega un alumno a la Universidad validando que no este previamente cargado
+        /// </summary>
+        /// <param name="g"> Universidad </param>
+        /// <param name="a"> Alumno </param>
+        /// <returns> Universidad </returns>
         public static Universidad operator +(Universidad g, Alumno a)
         {
             bool flag = false;
@@ -214,6 +276,12 @@ namespace ClasesInstanciables
 
             return g;
         }
+        /// <summary>
+        /// Agrega un profesor a la Universidad validando que no este previamente cargado
+        /// </summary>
+        /// <param name="g"> Universidad </param>
+        /// <param name="i"> Profesor </param>
+        /// <returns> Universidad </returns>
         public static Universidad operator +(Universidad g, Profesor i)
         {
 
