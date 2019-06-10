@@ -41,9 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IArchivos.cs" />
+    <Compile Include="IArchivo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Texto.cs" />
+    <Compile Include="Xml.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Excepciones\Excepciones.csproj">

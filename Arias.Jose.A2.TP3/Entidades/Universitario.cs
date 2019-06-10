@@ -24,6 +24,7 @@ namespace EntidadesAbstractas
         #endregion
 
         #region METODOS
+        
         public override bool Equals(object obj)
         {
             bool flag = false;

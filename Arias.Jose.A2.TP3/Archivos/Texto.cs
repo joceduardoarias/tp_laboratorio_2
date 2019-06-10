@@ -7,7 +7,7 @@ using System.IO;
 using Excepciones;
 namespace Archivos
 {
-    public class Texto : IArchivos<string>
+    public class Texto : IArchivo<string> 
     {
         public bool Guardar(string archivo, string datos)
         {

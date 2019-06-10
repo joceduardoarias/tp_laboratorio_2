@@ -82,15 +82,15 @@ namespace VistaConsola
             Console.WriteLine(gim.ToString());
             Console.ReadKey();
             Console.Clear();
-            //try
-            // {
-            //     Universidad.Guardar(gim);
-            //     Console.WriteLine("Archivo de Universidad guardado.");
-            // }
-            // catch (ArchivosException e)
-            // {
-            //     Console.WriteLine(e.Message);
-            // }
+            try
+            {
+                Universidad.Guardar(gim);
+                Console.WriteLine("Archivo de Universidad guardado.");
+            }
+            catch (ArchivosException e)
+            {
+                Console.WriteLine(e.Message);
+            }
             try
             {
                 int jornada = 0;

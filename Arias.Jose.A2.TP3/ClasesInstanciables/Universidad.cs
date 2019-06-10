@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Excepciones;
+using Archivos;
+using System.IO;
+using System.Xml.Serialization;
 namespace ClasesInstanciables
 {
     public class Universidad
@@ -70,6 +73,24 @@ namespace ClasesInstanciables
         #endregion
 
         #region METODOS
+        public static bool Guardar(Universidad uni)
+        {
+            bool flag = false;
+            Xml<Universidad> xml = new Xml<Universidad>();
+            try
+            {
+               if(xml.Guardar(AppDomain.CurrentDomain.BaseDirectory + "Universidad.xml", uni))
+                {
+                    flag = true;
+                }
+            }
+            catch (Exception e)
+            {
+
+                throw new ArchivosException(e);
+            }
+            return flag;
+        }
         public static string MostrarDatos(Universidad uni)
         {
             StringBuilder sb = new StringBuilder();
