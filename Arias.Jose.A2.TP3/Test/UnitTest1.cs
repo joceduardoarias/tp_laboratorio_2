@@ -9,20 +9,6 @@ namespace Test
     [TestClass]
     public class UnitTest1
     {
-
-        [TestMethod]
-        public void TestDniInvalidoException()
-        {
-            try
-            {
-                Alumno a4 = new Alumno(4, "Miguel", "Hernandez", "92/6*456", EntidadesAbstractas.Persona.ENacionalidad.Extranjero, Universidad.EClases.Legislacion, Alumno.EEstadoCuenta.AlDia);
-                Assert.Fail();
-            }
-            catch (DniInvalidoException e)
-            {
-                Assert.IsInstanceOfType(e, typeof(DniInvalidoException));
-            }
-        }
         [TestMethod]
         public void AlumnoArgentinoValido()
         {
@@ -55,25 +41,28 @@ namespace Test
         [TestMethod]
         public void TestAtributosAlumnoNotNull()
         {
-            Alumno a1 = new Alumno(4, "Miguel", "Hernandez", "92/6*456", EntidadesAbstractas.Persona.ENacionalidad.Extranjero, Universidad.EClases.Legislacion, Alumno.EEstadoCuenta.AlDia);
-            Assert.IsNotNull(a1.Nacionalidad);
-            Assert.IsNotNull(a1.Nombre);
-            Assert.IsNotNull(a1.Apellido);
-            Assert.IsNotNull(a1.DNI);
+            Alumno alumno = new Alumno(5, "Carlos", "Gonzalez", "12236456", EntidadesAbstractas.Persona.ENacionalidad.Argentino, Universidad.EClases.Programacion, Alumno.EEstadoCuenta.AlDia);
+            Assert.IsNotNull(alumno.Apellido);
+            Assert.IsNotNull(alumno.Nombre);
+            Assert.IsNotNull(alumno.Nacionalidad);
+            Assert.IsNotNull(alumno.DNI);
         }
         [TestMethod]
-        public void AlumnoArgentinoDNIInvalido()
+        public void pruebaAlumnoRepetido()
         {
+            Universidad universidad = new Universidad();
+            Alumno Alumno1 = new Alumno(5, "Carlos", "Gonzalez", "12236456", EntidadesAbstractas.Persona.ENacionalidad.Argentino, Universidad.EClases.Programacion, Alumno.EEstadoCuenta.AlDia);
+            Alumno Alumno2 = new Alumno(5, "Carlos", "Gonzalez", "12236456", EntidadesAbstractas.Persona.ENacionalidad.Argentino, Universidad.EClases.Programacion, Alumno.EEstadoCuenta.AlDia);
+
+            universidad += Alumno1;
             try
             {
-                Alumno a = new Alumno(1, "Juan", "Lopez", "92234456", Persona.ENacionalidad.Argentino, Universidad.EClases.Programacion, Alumno.EEstadoCuenta.Becado);
-                Assert.Fail("Alumno argentino con DNI extranjero");
+                universidad += Alumno2;
             }
-            catch (DniInvalidoException e)
+            catch (Exception e)
             {
-                Assert.IsInstanceOfType(e, typeof(DniInvalidoException));
+                Assert.IsInstanceOfType(e, typeof(AlumnoRepetidoException));
             }
-            
         }
     }
 }
