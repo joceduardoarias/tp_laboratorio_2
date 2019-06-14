@@ -1,0 +1,6 @@
+C:\Users\asus\source\repos\TP_4\Entidades\bin\Debug\Entidades.dll
+C:\Users\asus\source\repos\TP_4\Entidades\bin\Debug\Entidades.pdb
+C:\Users\asus\source\repos\TP_4\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\asus\source\repos\TP_4\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\asus\source\repos\TP_4\Entidades\obj\Debug\Entidades.dll
+C:\Users\asus\source\repos\TP_4\Entidades\obj\Debug\Entidades.pdb
