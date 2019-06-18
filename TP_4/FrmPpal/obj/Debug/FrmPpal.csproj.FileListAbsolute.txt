@@ -8,3 +8,13 @@ C:\Users\asus\source\repos\TP_4\FrmPpal\obj\Debug\FrmPpal.csproj.GenerateResourc
 C:\Users\asus\source\repos\TP_4\FrmPpal\obj\Debug\FrmPpal.csproj.CoreCompileInputs.cache
 C:\Users\asus\source\repos\TP_4\FrmPpal\obj\Debug\FrmPpal.exe
 C:\Users\asus\source\repos\TP_4\FrmPpal\obj\Debug\FrmPpal.pdb
+C:\Users\asus\Documents\C#\tp_laboratorio_2\TP_4\FrmPpal\bin\Debug\FrmPpal.exe.config
+C:\Users\asus\Documents\C#\tp_laboratorio_2\TP_4\FrmPpal\bin\Debug\FrmPpal.exe
+C:\Users\asus\Documents\C#\tp_laboratorio_2\TP_4\FrmPpal\bin\Debug\FrmPpal.pdb
+C:\Users\asus\Documents\C#\tp_laboratorio_2\TP_4\FrmPpal\obj\Debug\FrmPpal.csprojAssemblyReference.cache
+C:\Users\asus\Documents\C#\tp_laboratorio_2\TP_4\FrmPpal\obj\Debug\FrmPpal.Form1.resources
+C:\Users\asus\Documents\C#\tp_laboratorio_2\TP_4\FrmPpal\obj\Debug\FrmPpal.Properties.Resources.resources
+C:\Users\asus\Documents\C#\tp_laboratorio_2\TP_4\FrmPpal\obj\Debug\FrmPpal.csproj.GenerateResource.cache
+C:\Users\asus\Documents\C#\tp_laboratorio_2\TP_4\FrmPpal\obj\Debug\FrmPpal.csproj.CoreCompileInputs.cache
+C:\Users\asus\Documents\C#\tp_laboratorio_2\TP_4\FrmPpal\obj\Debug\FrmPpal.exe
+C:\Users\asus\Documents\C#\tp_laboratorio_2\TP_4\FrmPpal\obj\Debug\FrmPpal.pdb

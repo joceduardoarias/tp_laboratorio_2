@@ -219,7 +219,7 @@ namespace ClasesInstanciables
         /// <param name="clase"> Clase </param>
         /// <returns> Universidad </returns>
         public static Universidad operator +(Universidad g, EClases clase)
-        {//primero elegir un prfesor que dicte esa clase
+        {
                 
 
             Jornada jornada;

@@ -31,13 +31,15 @@ namespace EntidadesAbstractas
         /// <returns>true si es del tipo Universitario, false si no lo es</returns>
         public override bool Equals(object obj)
         {
-            bool flag = false;
-            if (obj != null && obj is Universitario)
+            if (!ReferenceEquals(obj, null) && obj is Universitario)
             {
-                if(((Universitario)obj==this))
-                flag = true;
+                Universitario objeto = (Universitario)obj;
+                if (objeto.legajo == this.legajo && objeto.DNI == this.DNI)
+                {
+                    return true;
+                }
             }
-            return flag;
+            return false;
         }
         /// <summary>
         /// Muestra los datos del Universitario

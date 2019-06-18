@@ -4,3 +4,10 @@ C:\Users\asus\source\repos\TP_4\Entidades\obj\Debug\Entidades.csprojAssemblyRefe
 C:\Users\asus\source\repos\TP_4\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\asus\source\repos\TP_4\Entidades\obj\Debug\Entidades.dll
 C:\Users\asus\source\repos\TP_4\Entidades\obj\Debug\Entidades.pdb
+C:\Users\asus\Documents\C#\tp_laboratorio_2\TP_4\Entidades\bin\Debug\Entidades.dll.config
+C:\Users\asus\Documents\C#\tp_laboratorio_2\TP_4\Entidades\bin\Debug\Entidades.dll
+C:\Users\asus\Documents\C#\tp_laboratorio_2\TP_4\Entidades\bin\Debug\Entidades.pdb
+C:\Users\asus\Documents\C#\tp_laboratorio_2\TP_4\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\asus\Documents\C#\tp_laboratorio_2\TP_4\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\asus\Documents\C#\tp_laboratorio_2\TP_4\Entidades\obj\Debug\Entidades.dll
+C:\Users\asus\Documents\C#\tp_laboratorio_2\TP_4\Entidades\obj\Debug\Entidades.pdb

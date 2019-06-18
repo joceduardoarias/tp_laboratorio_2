@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Agregar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,14 +38,16 @@
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textDireccion = new System.Windows.Forms.TextBox();
+            this.mtxtTrackingID = new System.Windows.Forms.MaskedTextBox();
+            this.cmsListas = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // Agregar
@@ -53,7 +56,7 @@
             this.Agregar.Name = "Agregar";
             this.Agregar.Size = new System.Drawing.Size(86, 23);
             this.Agregar.TabIndex = 0;
-            this.Agregar.Text = "Agregar";
+            this.Agregar.Text = "&Agregar";
             this.Agregar.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -62,7 +65,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(86, 23);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Mostrar Todos";
+            this.button2.Text = "&Mostrar Todos";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // label1
@@ -86,6 +89,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ContextMenuStrip = this.cmsListas;
             this.label3.Location = new System.Drawing.Point(526, 62);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 13);
@@ -123,20 +127,6 @@
             this.richTextBox1.Size = new System.Drawing.Size(378, 124);
             this.richTextBox1.TabIndex = 8;
             this.richTextBox1.Text = "";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(457, 321);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(203, 20);
-            this.textBox1.TabIndex = 10;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(457, 360);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(203, 20);
-            this.textBox2.TabIndex = 11;
             // 
             // label5
             // 
@@ -176,12 +166,34 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.textDireccion);
+            this.groupBox3.Controls.Add(this.mtxtTrackingID);
             this.groupBox3.Location = new System.Drawing.Point(445, 281);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(328, 124);
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Paquetes";
+            // 
+            // textDireccion
+            // 
+            this.textDireccion.Location = new System.Drawing.Point(12, 79);
+            this.textDireccion.Name = "textDireccion";
+            this.textDireccion.Size = new System.Drawing.Size(203, 20);
+            this.textDireccion.TabIndex = 1;
+            // 
+            // mtxtTrackingID
+            // 
+            this.mtxtTrackingID.Location = new System.Drawing.Point(12, 40);
+            this.mtxtTrackingID.Mask = "000-000-0000";
+            this.mtxtTrackingID.Name = "mtxtTrackingID";
+            this.mtxtTrackingID.Size = new System.Drawing.Size(203, 20);
+            this.mtxtTrackingID.TabIndex = 0;
+            // 
+            // cmsListas
+            // 
+            this.cmsListas.Name = "cmsListas";
+            this.cmsListas.Size = new System.Drawing.Size(61, 4);
             // 
             // Form1
             // 
@@ -190,8 +202,6 @@
             this.ClientSize = new System.Drawing.Size(894, 450);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.listBox3);
             this.Controls.Add(this.listBox2);
@@ -205,7 +215,10 @@
             this.Controls.Add(this.groupBox3);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,13 +235,14 @@
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.MaskedTextBox mtxtTrackingID;
+        private System.Windows.Forms.TextBox textDireccion;
+        private System.Windows.Forms.ContextMenuStrip cmsListas;
     }
 }
 

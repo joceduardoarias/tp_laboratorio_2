@@ -13,7 +13,7 @@ namespace Archivos
         {
             bool retorno = false;
             StreamWriter text = new StreamWriter(archivo);
-            if (!object.ReferenceEquals(text, null) && !object.ReferenceEquals(datos, null))
+            if (File.Exists(archivo))
             {
                 text.Write(datos);
                 retorno = true;
