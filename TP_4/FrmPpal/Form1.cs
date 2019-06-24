@@ -31,14 +31,11 @@ namespace FrmPpal
             {
                 correo += paquetes;
             }
-            catch (TrackinIdrepetidoException)
+            catch (TrackinIdrepetidoException ex)
             {
-                throw;
+                MessageBox.Show(ex.Message);
             }
-            catch (Exception)
-            {
-                throw;
-            }
+            
             this.ActualizarEstados();
         }
 

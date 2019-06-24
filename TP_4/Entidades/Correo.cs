@@ -49,6 +49,7 @@ namespace Entidades
                 sb.Append("(" + item.Estado.ToString() + ").\n");
             }
             return sb.ToString();
+
         }
         /// <summary>
         /// Cierra todos los hilos activos
