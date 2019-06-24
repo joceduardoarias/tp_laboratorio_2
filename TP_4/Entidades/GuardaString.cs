@@ -5,12 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 namespace Entidades
-{   //La clase donde se guardan las extensiones debe ser estatica
+{   
    public static class GuardaString
     {
-
-        //El metodo que se extiende debe ser estatico
-        //El primer parametro lleva this y representa el tipo que estamos extendiendo
         /// <summary>
         /// Este guardará en un archivo de texto en el escritorio de la máquina.
         /// </summary>
@@ -28,9 +25,9 @@ namespace Entidades
                 fichero.Close();
                 flag = true;
             }
-            catch(Exception)
+            catch(Exception e)
             {
-                throw;
+                throw new Exception(e.Message);
             }
             return flag;
         }

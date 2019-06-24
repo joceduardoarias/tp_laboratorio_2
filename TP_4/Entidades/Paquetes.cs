@@ -66,6 +66,9 @@ namespace Entidades
         #endregion
 
         #region METODOS
+        /// <summary>
+        /// Cambia e informa el estado de los paquetes ingresados al correo
+        /// </summary>
         public void MockCicloDeVida()
         {
             do
@@ -75,23 +78,31 @@ namespace Entidades
                 this.estado++;
                 InformaEstado(this.Estado, EventArgs.Empty);
             } while ((int)this.Estado < 3);
-           // InformaEstado(this.estado, EventArgs.Empty);
+            try
+            {
+                PaqueteDAO.Insertar(this);
+            }
+            catch (Exception e)
+            {
+                InformaEstado(e, EventArgs.Empty);
+            }
 
-            //Thread.Sleep(400);
-            //this.estado = EEstado.Ingresado;
-            //InformaEstado(this.Estado, EventArgs.Empty);
-            //Thread.Sleep(400);
-            //this.estado = EEstado.EnViaje;
-            //InformaEstado(this.Estado, EventArgs.Empty);
-            //Thread.Sleep(400);
-            //this.estado = EEstado.Entregado;
-            //InformaEstado(this.Estado, EventArgs.Empty);
-            PaqueteDAO.Insertar(this);
         }
+        /// <summary>
+        /// Muestra los datos del paquete con un formato especifico
+        /// </summary>
+        /// <param name="elemento"> Elemento a ser mostrado </param>
+        /// <returns></returns>
         public string MostrarDatos(IMostrar<Paquetes> elemento)
         {
             return String.Format("{0} para {1}", ((Paquetes)elemento).trackingID, ((Paquetes)elemento).direccionEntrega);
         }
+        /// <summary>
+        /// Dos paquetes serán iguales siempre y cuando su Tracking ID sea el mismo.
+        /// </summary>
+        /// <param name="p1"> Paquete </param>
+        /// <param name="p2"> Paquete </param>
+        /// <returns></returns>
         public static bool operator ==(Paquetes p1, Paquetes p2)
         {
             bool flag = false;
@@ -101,10 +112,20 @@ namespace Entidades
             }
             return flag;
         }
+        /// <summary>
+        /// Dos paquetes serán distintos siempre y cuando su Tracking ID no sea el mismo.
+        /// </summary>
+        /// <param name="p1"> Paquete </param>
+        /// <param name="p2"> Paquete </param>
+        /// <returns></returns>
         public static bool operator !=(Paquetes p1, Paquetes p2)
         {
             return !(p1 == p2);
         }
+        /// <summary>
+        /// Devuelve la información del paquete.
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return MostrarDatos(this);

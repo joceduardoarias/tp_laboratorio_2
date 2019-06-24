@@ -13,6 +13,9 @@ namespace Entidades
         private static SqlConnection conexion;
 
         #region CONSTRUCTOR
+        /// <summary>
+        /// Establece la conexion con la base de datos
+        /// </summary>
         static PaqueteDAO()
         {
             conexion = new SqlConnection(Properties.Settings.Default.conexion_bd);
@@ -20,6 +23,11 @@ namespace Entidades
         #endregion
 
         #region METDOS
+        /// <summary>
+        /// Guarda los datos de un paquete en la base de datos [correo-sp-2017].[dbo].[Paquetes]
+        /// </summary>
+        /// <param name="p"> Paquete a guardar </param>
+        /// <returns></returns>
         public static bool Insertar(Paquetes p)
         {
             bool flag = false;

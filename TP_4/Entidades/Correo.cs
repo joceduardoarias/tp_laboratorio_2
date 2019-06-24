@@ -34,6 +34,11 @@ namespace Entidades
         #endregion
 
         #region METODOS
+        /// <summary>
+        /// Muestra la informacion de los paquetes del correo con su estado actual
+        /// </summary>
+        /// <param name="elementos"> Correo </param>
+        /// <returns></returns>
         public string MostrarDatos(IMostrar<List<Paquetes>> elemento)
         {
             StringBuilder sb = new StringBuilder();
@@ -45,6 +50,9 @@ namespace Entidades
             }
             return sb.ToString();
         }
+        /// <summary>
+        /// Cierra todos los hilos activos
+        /// </summary>
         public void FinEntrega()
         {
             foreach (Thread item in this.mockPaquetes)
