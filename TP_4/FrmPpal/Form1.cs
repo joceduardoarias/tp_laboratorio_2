@@ -18,7 +18,11 @@ namespace FrmPpal
             InitializeComponent();
             correo = new Correo();
         }
-       
+        /// <summary>
+        /// Muestra los paquetes y su estado actual y escribe en un archivo de texto en el escritorio esa informacion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Agregar_Click(object sender, EventArgs e)
         {
             Paquetes paquetes = new Paquetes(textDireccion.Text, mtxtTrackingID.Text);
@@ -60,36 +64,46 @@ namespace FrmPpal
         /// </summary>
         private void ActualizarEstados()
         {
-            
+
             foreach (Paquetes item in correo.Paquetes)
             {
                 if (item.Estado == Paquetes.EEstado.Ingresado)
                 {
                     listBox1.Items.Clear();
                     listBox1.Items.Add(item.ToString());
-                   
+
                 }
                 if (item.Estado == Paquetes.EEstado.EnViaje)
                 {
                     listBox1.Items.Clear();
                     listBox2.Items.Clear();
                     listBox2.Items.Add(item.ToString());
-                    
+
                 }
                 if (item.Estado == Paquetes.EEstado.Entregado)
                 {
                     listBox2.Items.Clear();
                     lstEstadoEntregado.Items.Clear();
                     lstEstadoEntregado.Items.Add(item);
-                   
+
                 }
             }
         }
 
+        /// <summary>
+        /// Muestra los paquetes y su estado actual y escribe en un archivo de texto en el escritorio esa informacion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button2_Click(object sender, EventArgs e)
         {
             this.MostrarInformacion<List<Paquetes>>((IMostrar<List<Paquetes>>)correo);
         }
+        /// <summary>
+        /// Muestra uno o todos los paquetes y su estado actual
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="elemento"></param>
         private void MostrarInformacion<T>(IMostrar<T> elemento)
         {
             string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\Salida.txt";
@@ -108,7 +122,11 @@ namespace FrmPpal
             }
 
         }
-
+        /// <summary>
+        /// Muestra los paquetes y su estado actual y escribe en un archivo de texto en el escritorio esa informacion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MostrarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.MostrarInformacion<Paquetes>((IMostrar<Paquetes>)lstEstadoEntregado.SelectedItem);
