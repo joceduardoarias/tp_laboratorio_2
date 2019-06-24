@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Threading;
 namespace Entidades
 {
-   public class Correo: IMostrar<List<Paquetes>>
+    public class Correo : IMostrar<List<Paquetes>>
     {
         private List<Thread> mockPaquetes;
         private List<Paquetes> paquetes;
@@ -36,14 +36,56 @@ namespace Entidades
         #region METODOS
         public string MostrarDatos(IMostrar<List<Paquetes>> elemento)
         {
-            throw new NotImplementedException();
+            StringBuilder sb = new StringBuilder();
+            foreach (Paquetes item in ((Correo)elemento).paquetes)
+            {
+                sb.Append(item.TrackingID.ToString() + " ");
+                sb.Append(item.DireccionEntrega.ToString() + " ");
+                sb.Append("(" + item.Estado.ToString() + ").\n");
+            }
+            return sb.ToString();
         }
         public void FinEntrega()
         {
-
+            foreach (Thread item in this.mockPaquetes)
+            {
+                if (item.IsAlive)
+                {
+                    item.Abort();
+                }
+            }
         }
-        public static Correo operator +(Correo c,Paquetes p)
+        /// <summary>
+        /// Agrega un paquete al correo siempre que este no posea un trackingID repetido
+        /// </summary>
+        /// <param name="c"> Correo </param>
+        /// <param name="p"> Paquete a agregar </param>
+        /// <returns> Correo </returns>
+        public static Correo operator +(Correo c, Paquetes p)
         {
+           
+            if (c.paquetes.Count == 0)
+            {   
+                
+                c.paquetes.Add(p);
+            }
+            else
+            {
+                foreach (Paquetes item in c.paquetes)
+                {
+                    if (item == p)
+                    {
+                        
+                        throw new TrackinIdrepetidoException("El paquete ya existe");
+                    }
+                    
+                }
+                c.paquetes.Add(p);
+            }
+            
+            Thread thread = new Thread(p.MockCicloDeVida);
+            c.mockPaquetes.Add(thread);
+            thread.Start();
             return c;
         }
         #endregion

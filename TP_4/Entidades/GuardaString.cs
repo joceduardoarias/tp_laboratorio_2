@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 namespace Entidades
 {   //La clase donde se guardan las extensiones debe ser estatica
-    static class GuardaString
+   public static class GuardaString
     {
 
         //El metodo que se extiende debe ser estatico
@@ -20,14 +20,20 @@ namespace Entidades
         public static bool Guardar(this string texto, string archivo)
         {
             bool flag = false;
-            if(File.Exists(archivo))
+            try
             {
                 StreamWriter fichero; 
                 fichero = new StreamWriter(archivo);
                 fichero.WriteLine(texto);
                 fichero.Close();
+                flag = true;
+            }
+            catch(Exception)
+            {
+                throw;
             }
             return flag;
         }
+        
     }
 }

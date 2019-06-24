@@ -18,3 +18,7 @@ C:\Users\asus\Documents\C#\tp_laboratorio_2\TP_4\FrmPpal\obj\Debug\FrmPpal.cspro
 C:\Users\asus\Documents\C#\tp_laboratorio_2\TP_4\FrmPpal\obj\Debug\FrmPpal.csproj.CoreCompileInputs.cache
 C:\Users\asus\Documents\C#\tp_laboratorio_2\TP_4\FrmPpal\obj\Debug\FrmPpal.exe
 C:\Users\asus\Documents\C#\tp_laboratorio_2\TP_4\FrmPpal\obj\Debug\FrmPpal.pdb
+C:\Users\asus\Documents\C#\tp_laboratorio_2\TP_4\FrmPpal\bin\Debug\Entidades.dll
+C:\Users\asus\Documents\C#\tp_laboratorio_2\TP_4\FrmPpal\bin\Debug\Entidades.pdb
+C:\Users\asus\Documents\C#\tp_laboratorio_2\TP_4\FrmPpal\bin\Debug\Entidades.dll.config
+C:\Users\asus\Documents\C#\tp_laboratorio_2\TP_4\FrmPpal\obj\Debug\FrmPpal.csproj.CopyComplete

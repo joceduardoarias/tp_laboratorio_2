@@ -34,9 +34,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.MostrarToolStripMenuItem = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mostrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
-            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.lstEstadoEntregado = new System.Windows.Forms.ListBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -45,7 +47,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textDireccion = new System.Windows.Forms.TextBox();
             this.mtxtTrackingID = new System.Windows.Forms.MaskedTextBox();
-            this.cmsListas = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.MostrarToolStripMenuItem.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -58,6 +60,7 @@
             this.Agregar.TabIndex = 0;
             this.Agregar.Text = "&Agregar";
             this.Agregar.UseVisualStyleBackColor = true;
+            this.Agregar.Click += new System.EventHandler(this.Agregar_Click);
             // 
             // button2
             // 
@@ -67,6 +70,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "&Mostrar Todos";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // label1
             // 
@@ -89,12 +93,26 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.ContextMenuStrip = this.cmsListas;
+            this.label3.ContextMenuStrip = this.MostrarToolStripMenuItem;
             this.label3.Location = new System.Drawing.Point(526, 62);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Entregado";
+            // 
+            // MostrarToolStripMenuItem
+            // 
+            this.MostrarToolStripMenuItem.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mostrarToolStripMenuItem1});
+            this.MostrarToolStripMenuItem.Name = "cmsListas";
+            this.MostrarToolStripMenuItem.Size = new System.Drawing.Size(181, 48);
+            // 
+            // mostrarToolStripMenuItem1
+            // 
+            this.mostrarToolStripMenuItem1.Name = "mostrarToolStripMenuItem1";
+            this.mostrarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.mostrarToolStripMenuItem1.Text = "Mostrar...";
+            this.mostrarToolStripMenuItem1.Click += new System.EventHandler(this.MostrarToolStripMenuItem1_Click);
             // 
             // listBox1
             // 
@@ -112,13 +130,13 @@
             this.listBox2.Size = new System.Drawing.Size(214, 160);
             this.listBox2.TabIndex = 6;
             // 
-            // listBox3
+            // lstEstadoEntregado
             // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(529, 95);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(223, 160);
-            this.listBox3.TabIndex = 7;
+            this.lstEstadoEntregado.FormattingEnabled = true;
+            this.lstEstadoEntregado.Location = new System.Drawing.Point(529, 95);
+            this.lstEstadoEntregado.Name = "lstEstadoEntregado";
+            this.lstEstadoEntregado.Size = new System.Drawing.Size(223, 160);
+            this.lstEstadoEntregado.TabIndex = 7;
             // 
             // richTextBox1
             // 
@@ -190,11 +208,6 @@
             this.mtxtTrackingID.Size = new System.Drawing.Size(203, 20);
             this.mtxtTrackingID.TabIndex = 0;
             // 
-            // cmsListas
-            // 
-            this.cmsListas.Name = "cmsListas";
-            this.cmsListas.Size = new System.Drawing.Size(61, 4);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -203,7 +216,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.listBox3);
+            this.Controls.Add(this.lstEstadoEntregado);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label3);
@@ -215,7 +228,8 @@
             this.Controls.Add(this.groupBox3);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.MostrarToolStripMenuItem.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -233,7 +247,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.ListBox lstEstadoEntregado;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -242,7 +256,8 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.MaskedTextBox mtxtTrackingID;
         private System.Windows.Forms.TextBox textDireccion;
-        private System.Windows.Forms.ContextMenuStrip cmsListas;
+        private System.Windows.Forms.ContextMenuStrip MostrarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mostrarToolStripMenuItem1;
     }
 }
 
