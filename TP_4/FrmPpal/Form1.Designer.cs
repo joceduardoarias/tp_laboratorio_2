@@ -105,12 +105,12 @@
             this.MostrarToolStripMenuItem.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mostrarToolStripMenuItem1});
             this.MostrarToolStripMenuItem.Name = "cmsListas";
-            this.MostrarToolStripMenuItem.Size = new System.Drawing.Size(181, 48);
+            this.MostrarToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
             // 
             // mostrarToolStripMenuItem1
             // 
             this.mostrarToolStripMenuItem1.Name = "mostrarToolStripMenuItem1";
-            this.mostrarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.mostrarToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
             this.mostrarToolStripMenuItem1.Text = "Mostrar...";
             this.mostrarToolStripMenuItem1.Click += new System.EventHandler(this.MostrarToolStripMenuItem1_Click);
             // 
@@ -227,7 +227,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Correo UTN Jose.Arias.2A";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.MostrarToolStripMenuItem.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

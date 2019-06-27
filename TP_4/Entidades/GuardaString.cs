@@ -20,7 +20,7 @@ namespace Entidades
             try
             {
                 StreamWriter fichero; 
-                fichero = new StreamWriter(archivo);
+                fichero = new StreamWriter(archivo,true);
                 fichero.WriteLine(texto);
                 fichero.Close();
                 flag = true;

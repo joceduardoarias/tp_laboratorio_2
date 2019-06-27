@@ -15,11 +15,14 @@ namespace Entidades
             EnViaje,
             Entregado
         }
-        public delegate void DelegadoEstado(object sender, EventArgs e);
-        public event DelegadoEstado InformaEstado;
         private string direccionEntrega;
         private EEstado estado;
         private string trackingID;
+
+        public delegate void DelegadoEstado(object sender, EventArgs e);
+
+        public event DelegadoEstado InformaEstado;
+        
 
         #region PROPIEDADES
         public string DireccionEntrega
@@ -62,7 +65,6 @@ namespace Entidades
         {
             this.direccionEntrega = direccionEntrega;
             this.trackingID = trackingID;
-
         }
         #endregion
 
@@ -72,15 +74,14 @@ namespace Entidades
         /// </summary>
         public void MockCicloDeVida()
         {
-
             do
             {
                 InformaEstado(this.estado, EventArgs.Empty);
                 Thread.Sleep(400);
                 this.estado++;
-                //int estado = (int)this.Estado + 1;
                 InformaEstado((EEstado)estado, EventArgs.Empty);
-            } while (this.Estado != EEstado.Entregado);
+            }
+            while (this.Estado != EEstado.Entregado);
             try
             {
                 PaqueteDAO.Insertar(this);
@@ -89,7 +90,6 @@ namespace Entidades
             {
                 InformaEstado(e, EventArgs.Empty);
             }
-
         }
         /// <summary>
         /// Muestra los datos del paquete con un formato especifico

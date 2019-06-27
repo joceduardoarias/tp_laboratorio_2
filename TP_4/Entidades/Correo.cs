@@ -44,8 +44,8 @@ namespace Entidades
             StringBuilder sb = new StringBuilder();
             foreach (Paquetes item in ((Correo)elemento).paquetes)
             {
-                sb.Append(item.TrackingID.ToString() + " ");
-                sb.Append(item.DireccionEntrega.ToString() + " ");
+                sb.Append(item.TrackingID + " ");
+                sb.Append(item.DireccionEntrega + " ");
                 sb.Append("(" + item.Estado.ToString() + ").\n");
             }
             return sb.ToString();
@@ -72,10 +72,8 @@ namespace Entidades
         /// <returns> Correo </returns>
         public static Correo operator +(Correo c, Paquetes p)
         {
-           
             if (c.paquetes.Count == 0)
             {   
-                
                 c.paquetes.Add(p);
             }
             else
@@ -87,11 +85,9 @@ namespace Entidades
                         
                         throw new TrackinIdrepetidoException("El paquete ya existe");
                     }
-                    
                 }
                 c.paquetes.Add(p);
             }
-            
             Thread thread = new Thread(p.MockCicloDeVida);
             c.mockPaquetes.Add(thread);
             thread.Start();

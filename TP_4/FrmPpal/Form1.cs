@@ -30,13 +30,12 @@ namespace FrmPpal
             try
             {
                 correo += paquetes;
+                this.ActualizarEstados();
             }
             catch (TrackinIdrepetidoException ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Paquete Repetido", MessageBoxButtons.OK, MessageBoxIcon.Question);
             }
-            
-            this.ActualizarEstados();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -45,6 +44,11 @@ namespace FrmPpal
         }
         private void Paq_InformaEstado(object sender, EventArgs e)
         {
+            if (sender is Exception)
+            {
+                MessageBox.Show(((Exception)sender).Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (this.InvokeRequired)
             {
                 Paquetes.DelegadoEstado d = new Paquetes.DelegadoEstado(Paq_InformaEstado);
@@ -61,32 +65,25 @@ namespace FrmPpal
         /// </summary>
         private void ActualizarEstados()
         {
-
+            listBox1.Items.Clear();
+            listBox2.Items.Clear();
+            lstEstadoEntregado.Items.Clear();
             foreach (Paquetes item in correo.Paquetes)
             {
                 if (item.Estado == Paquetes.EEstado.Ingresado)
                 {
-                    listBox1.Items.Clear();
                     listBox1.Items.Add(item.ToString());
-
                 }
                 if (item.Estado == Paquetes.EEstado.EnViaje)
                 {
-                    listBox1.Items.Clear();
-                    listBox2.Items.Clear();
                     listBox2.Items.Add(item.ToString());
-
                 }
                 if (item.Estado == Paquetes.EEstado.Entregado)
                 {
-                    listBox2.Items.Clear();
-                    lstEstadoEntregado.Items.Clear();
                     lstEstadoEntregado.Items.Add(item);
-
                 }
             }
         }
-
         /// <summary>
         /// Muestra los paquetes y su estado actual y escribe en un archivo de texto en el escritorio esa informacion
         /// </summary>
@@ -106,14 +103,14 @@ namespace FrmPpal
             string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\Salida.txt";
             if (elemento != null)
             {
+                richTextBox1.Clear();
                 if (elemento is Paquetes)
                 {
-
-                    richTextBox1.AppendText(((Paquetes)elemento).ToString());
+                    richTextBox1.AppendText(elemento.ToString());
                 }
                 else if (elemento is Correo)
                 {
-                    richTextBox1.Text = ((Correo)elemento).MostrarDatos((Correo)elemento);
+                   richTextBox1.AppendText(correo.MostrarDatos((IMostrar<List<Paquetes>>)elemento));
                 }
                 richTextBox1.Text.Guardar(desktopPath);
             }
