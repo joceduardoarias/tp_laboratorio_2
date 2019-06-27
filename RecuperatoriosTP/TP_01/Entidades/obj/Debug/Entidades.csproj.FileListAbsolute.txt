@@ -1,0 +1,12 @@
+C:\Users\asus\source\repos\Entidades\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\asus\source\repos\Entidades\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\asus\source\repos\Entidades\Entidades\bin\Debug\Entidades.dll
+C:\Users\asus\source\repos\Entidades\Entidades\bin\Debug\Entidades.pdb
+C:\Users\asus\source\repos\Entidades\Entidades\obj\Debug\Entidades.dll
+C:\Users\asus\source\repos\Entidades\Entidades\obj\Debug\Entidades.pdb
+C:\Users\asus\Desktop\tp_laboratorio_2\RecuperatoriosTP\TP_01\Entidades\bin\Debug\Entidades.dll
+C:\Users\asus\Desktop\tp_laboratorio_2\RecuperatoriosTP\TP_01\Entidades\bin\Debug\Entidades.pdb
+C:\Users\asus\Desktop\tp_laboratorio_2\RecuperatoriosTP\TP_01\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\asus\Desktop\tp_laboratorio_2\RecuperatoriosTP\TP_01\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\asus\Desktop\tp_laboratorio_2\RecuperatoriosTP\TP_01\Entidades\obj\Debug\Entidades.dll
+C:\Users\asus\Desktop\tp_laboratorio_2\RecuperatoriosTP\TP_01\Entidades\obj\Debug\Entidades.pdb
