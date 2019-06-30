@@ -8,9 +8,9 @@ using Archivos;
 using Excepciones;
 namespace ClasesInstanciables
 {
-   public class Jornada
+    public class Jornada
     {
-        
+
         private List<Alumno> alumnos;
         private Universidad.EClases clase;
         private Profesor instructor;
@@ -56,7 +56,7 @@ namespace ClasesInstanciables
         {
             alumnos = new List<Alumno>();
         }
-        public Jornada(Universidad.EClases clase, Profesor instructor):this()
+        public Jornada(Universidad.EClases clase, Profesor instructor) : this()
         {
             this.Clases = clase;
             this.Instructor = instructor;
@@ -72,18 +72,10 @@ namespace ClasesInstanciables
         public static bool Guardar(Jornada jornada)
         {
             bool flag = false;
-            try
+            Texto texto = new Texto();
+            if (texto.Guardar("Jornada.txt", jornada.ToString()))
             {
-                Texto texto = new Texto();
-                if (texto.Guardar("Jornada", jornada.ToString()))
-                {
-                    flag = true;
-                }
-            }
-            catch (Exception e)
-            {
-
-                throw new ArchivosException(e);
+                flag = true;
             }
             return flag;
         }
@@ -94,11 +86,10 @@ namespace ClasesInstanciables
         public static string Leer()
         {
             string retorno = " ";
-            if (!File.Exists("Jornada"))
-            {
-                Texto texto = new Texto();
-                texto.Leer("Jornada.txt", out retorno);
-            }
+
+            Texto texto = new Texto();
+            texto.Leer("Jornada.txt", out retorno);
+
             return retorno;
         }
         /// <summary>
@@ -110,7 +101,7 @@ namespace ClasesInstanciables
         public static bool operator ==(Jornada j, Alumno a)
         {
             bool flag = false;
-            if(j.Alumnos.Contains(a))
+            if (j.Alumnos.Contains(a))
             {
                 flag = true;
             }
@@ -132,9 +123,9 @@ namespace ClasesInstanciables
         /// <param name="j"> Jornada </param>
         /// <param name="a"> Alumno a agregar </param>
         /// <returns> Jornada </returns>
-        public static Jornada operator +(Jornada j,Alumno a)
+        public static Jornada operator +(Jornada j, Alumno a)
         {
-          if(j!=a)
+            if (j != a)
             {
                 j.Alumnos.Add(a);
             }
@@ -154,7 +145,6 @@ namespace ClasesInstanciables
             {
                 sb.Append(item);
             }
-            sb.AppendLine("<------------------------------------------------>");
             return sb.ToString();
         }
         #endregion

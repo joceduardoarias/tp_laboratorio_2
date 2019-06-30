@@ -12,29 +12,29 @@ namespace Archivos
         public bool Guardar(string archivo, string datos)
         {
             bool retorno = false;
-            StreamWriter text = new StreamWriter(archivo);
-            if (File.Exists(archivo))
+            
+            try
             {
-                text.Write(datos);
-                retorno = true;
+                StreamWriter fichero;
+                fichero = new StreamWriter(archivo);
+                fichero.WriteLine(datos);
+                fichero.Close();
             }
-            else
+            catch (Exception e)
             {
-                throw new ArchivosException(new Exception());
+                throw new ArchivosException(e);
             }
-            text.Close();
-
             return retorno;
         }
         public bool Leer(string archivo, out string datos)
         {
             bool retorno = false;
-            StreamReader streamWriter;
+            StreamReader streamReader;
             try
             {
-                streamWriter = new StreamReader(archivo);
-                datos = streamWriter.ReadToEnd();
-                streamWriter.Close();
+                streamReader = new StreamReader(archivo);
+                datos = streamReader.ReadToEnd();
+                streamReader.Close();
                 retorno = true;
 
             }

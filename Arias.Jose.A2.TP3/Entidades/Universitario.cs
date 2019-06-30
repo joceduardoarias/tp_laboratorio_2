@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace EntidadesAbstractas
 {
-  public abstract class Universitario:Persona
+    public abstract class Universitario : Persona
     {
         #region CAMPOS
         private int legajo;
         #endregion
 
         #region CONSTRUCTOR
-        public Universitario()
+        public Universitario() : base()
         {
 
         }
-        public Universitario(int legajo,string nombre,string apellido,string dni,ENacionalidad nacionalidad):base(nombre,apellido,dni,nacionalidad)
+        public Universitario(int legajo, string nombre, string apellido, string dni, ENacionalidad nacionalidad) : base(nombre, apellido, dni, nacionalidad)
         {
             this.legajo = legajo;
         }
@@ -31,13 +31,9 @@ namespace EntidadesAbstractas
         /// <returns>true si es del tipo Universitario, false si no lo es</returns>
         public override bool Equals(object obj)
         {
-            if (!ReferenceEquals(obj, null) && obj is Universitario)
+            if (obj is Universitario && this is Universitario)
             {
-                Universitario objeto = (Universitario)obj;
-                if (objeto.legajo == this.legajo && objeto.DNI == this.DNI)
-                {
-                    return true;
-                }
+                return true;
             }
             return false;
         }
@@ -49,7 +45,7 @@ namespace EntidadesAbstractas
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(base.ToString());
-            sb.AppendLine("Legajo:"+ this.legajo);
+            sb.AppendLine("Legajo:" + this.legajo);
             return sb.ToString();
         }
         /// <summary>
@@ -58,10 +54,10 @@ namespace EntidadesAbstractas
         /// <param name="pg1"> Universitario a comparar </param>
         /// <param name="pg2"> Universitario a comparar </param>
         /// <returns>True si son iguales, false si no lo son</returns>
-        public static bool operator ==(Universitario pg1,Universitario pg2)
+        public static bool operator ==(Universitario pg1, Universitario pg2)
         {
             bool flag = false;
-            if(pg1.legajo == pg2.legajo || pg1.DNI == pg2.DNI)
+            if ((pg1.legajo == pg2.legajo || pg1.DNI == pg2.DNI) && pg1.Equals(pg2))
             {
                 flag = true;
             }

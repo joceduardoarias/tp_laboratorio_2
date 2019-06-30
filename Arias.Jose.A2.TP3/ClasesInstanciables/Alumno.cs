@@ -8,7 +8,7 @@ namespace ClasesInstanciables
 {
     public sealed class Alumno : Universitario
     {
-      
+
         public enum EEstadoCuenta
         {
             AlDia,
@@ -20,16 +20,16 @@ namespace ClasesInstanciables
         private EEstadoCuenta estadoCuenta;
 
         #region CONSTRUCTOR
-        public Alumno()
+        public Alumno() : base()
         {
 
         }
-        public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma):base(id,nombre,apellido,dni,nacionalidad)
+        public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma) : base(id, nombre, apellido, dni, nacionalidad)
         {
             this.claseQueToma = claseQueToma;
         }
         public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma, EEstadoCuenta estadoCuenta)
-            : this(id, nombre, apellido, dni, nacionalidad,claseQueToma)
+            : this(id, nombre, apellido, dni, nacionalidad, claseQueToma)
         {
             this.estadoCuenta = estadoCuenta;
         }
@@ -44,7 +44,7 @@ namespace ClasesInstanciables
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(base.MostrarDatos());
-            sb.AppendLine("Estado Cuenta:"+ this.estadoCuenta);
+            sb.AppendLine("Estado Cuenta:" + this.estadoCuenta);
             sb.AppendLine(ParticiparEnClase());
             return sb.ToString();
         }
@@ -55,7 +55,7 @@ namespace ClasesInstanciables
         protected override string ParticiparEnClase()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("TOMA CLASE DE:"+ this.claseQueToma);
+            sb.AppendLine("TOMA CLASE DE:" + this.claseQueToma);
             return sb.ToString();
         }
         /// <summary>
@@ -73,10 +73,10 @@ namespace ClasesInstanciables
         /// <param name="a"></param>
         /// <param name="clase"></param>
         /// <returns></returns>
-        public static bool operator ==(Alumno a,Universidad.EClases clase)
+        public static bool operator ==(Alumno a, Universidad.EClases clase)
         {
             bool flag = false;
-            if(a.claseQueToma == clase && a.estadoCuenta != EEstadoCuenta.Deudor)
+            if (a.claseQueToma == clase && a.estadoCuenta != EEstadoCuenta.Deudor)
             {
                 flag = true;
             }
@@ -89,7 +89,7 @@ namespace ClasesInstanciables
         /// <param name="a"></param>
         /// <param name="clase"></param>
         /// <returns></returns>
-        public static bool operator !=(Alumno a,Universidad.EClases clase)
+        public static bool operator !=(Alumno a, Universidad.EClases clase)
         {
             return !(a == clase);
         }
