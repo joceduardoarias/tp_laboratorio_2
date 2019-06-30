@@ -77,11 +77,11 @@ namespace EntidadesAbstractas
         #endregion
 
         #region Constructor
-        public Persona() : this("", "", ENacionalidad.Argentino)
+        public Persona() 
         {
 
         }
-        public Persona(string nombre, string apellido, ENacionalidad nacionalidad)
+        public Persona(string nombre, string apellido, ENacionalidad nacionalidad):this()
         {
             this.Nombre = nombre;
             this.Apellido = apellido;
@@ -106,7 +106,6 @@ namespace EntidadesAbstractas
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("NOMBRE COMPLETO: "+this.apellido+","+ this.nombre);
-            //sb.AppendLine("DNI:"+ this.dni);
             sb.AppendLine("Nacionalidad:"+ this.nacionalidad);
             return sb.ToString();
         }

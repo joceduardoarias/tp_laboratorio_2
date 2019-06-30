@@ -56,6 +56,52 @@
     <Jornada>
       <Alumnos>
         <Alumno>
+          <Apellido>Lopez</Apellido>
+          <DNI>12234456</DNI>
+          <Nacionalidad>Argentino</Nacionalidad>
+          <Nombre>Juan</Nombre>
+        </Alumno>
+        <Alumno>
+          <Apellido>Gonzalez</Apellido>
+          <DNI>12236456</DNI>
+          <Nacionalidad>Argentino</Nacionalidad>
+          <Nombre>Carlos</Nombre>
+        </Alumno>
+      </Alumnos>
+      <Clases>Programacion</Clases>
+      <Instructor>
+        <Apellido>Lopez</Apellido>
+        <DNI>12234456</DNI>
+        <Nacionalidad>Argentino</Nacionalidad>
+        <Nombre>Juan</Nombre>
+      </Instructor>
+    </Jornada>
+    <Jornada>
+      <Alumnos>
+        <Alumno>
+          <Apellido>Lopez</Apellido>
+          <DNI>12234456</DNI>
+          <Nacionalidad>Argentino</Nacionalidad>
+          <Nombre>Juan</Nombre>
+        </Alumno>
+        <Alumno>
+          <Apellido>Gonzalez</Apellido>
+          <DNI>12236456</DNI>
+          <Nacionalidad>Argentino</Nacionalidad>
+          <Nombre>Carlos</Nombre>
+        </Alumno>
+      </Alumnos>
+      <Clases>Programacion</Clases>
+      <Instructor>
+        <Apellido>Juarez</Apellido>
+        <DNI>32234456</DNI>
+        <Nacionalidad>Argentino</Nacionalidad>
+        <Nombre>Roberto</Nombre>
+      </Instructor>
+    </Jornada>
+    <Jornada>
+      <Alumnos>
+        <Alumno>
           <Apellido>Suarez</Apellido>
           <DNI>91122456</DNI>
           <Nacionalidad>Extranjero</Nacionalidad>
@@ -73,42 +119,13 @@
     <Jornada>
       <Alumnos>
         <Alumno>
-          <Apellido>Hernandez</Apellido>
-          <DNI>92264456</DNI>
+          <Apellido>Suarez</Apellido>
+          <DNI>91122456</DNI>
           <Nacionalidad>Extranjero</Nacionalidad>
-          <Nombre>Miguel</Nombre>
-        </Alumno>
-        <Alumno>
-          <Apellido>Smith</Apellido>
-          <DNI>22236456</DNI>
-          <Nacionalidad>Argentino</Nacionalidad>
-          <Nombre>Rodrigo</Nombre>
+          <Nombre>Joaquin</Nombre>
         </Alumno>
       </Alumnos>
-      <Clases>Legislacion</Clases>
-      <Instructor>
-        <Apellido>Lopez</Apellido>
-        <DNI>12234456</DNI>
-        <Nacionalidad>Argentino</Nacionalidad>
-        <Nombre>Juan</Nombre>
-      </Instructor>
-    </Jornada>
-    <Jornada>
-      <Alumnos>
-        <Alumno>
-          <Apellido>Hernandez</Apellido>
-          <DNI>92264456</DNI>
-          <Nacionalidad>Extranjero</Nacionalidad>
-          <Nombre>Miguel</Nombre>
-        </Alumno>
-        <Alumno>
-          <Apellido>Smith</Apellido>
-          <DNI>22236456</DNI>
-          <Nacionalidad>Argentino</Nacionalidad>
-          <Nombre>Rodrigo</Nombre>
-        </Alumno>
-      </Alumnos>
-      <Clases>Legislacion</Clases>
+      <Clases>Laboratorio</Clases>
       <Instructor>
         <Apellido>Juarez</Apellido>
         <DNI>32234456</DNI>

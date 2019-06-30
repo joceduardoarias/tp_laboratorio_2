@@ -46,6 +46,7 @@ namespace ClasesInstanciables
         protected override string MostrarDatos()
         {
             StringBuilder sb = new StringBuilder();
+            sb.AppendFormat( clasesDeDia.Peek().ToString());
             sb.AppendFormat(base.MostrarDatos());
             sb.AppendFormat(this.ParticiparEnClase());
             return sb.ToString();

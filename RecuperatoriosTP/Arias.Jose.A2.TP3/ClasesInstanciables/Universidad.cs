@@ -120,7 +120,7 @@ namespace ClasesInstanciables
         public static bool operator ==(Universidad g, Alumno a)
         {
             bool flag = false;
-            // if(!ReferenceEquals(g,null)&&ReferenceEquals(a,null))
+          
             foreach (Alumno item in g.alumnos)
             {
                 if (item == a)
@@ -220,8 +220,6 @@ namespace ClasesInstanciables
         /// <returns> Universidad </returns>
         public static Universidad operator +(Universidad g, EClases clase)
         {
-                
-
             Jornada jornada;
             foreach (Profesor item in g.profesores)
             {
@@ -253,7 +251,6 @@ namespace ClasesInstanciables
         /// <returns> Universidad </returns>
         public static Universidad operator +(Universidad g, Alumno a)
         {
-            bool flag = false;
             if (g.Alumnos.Count == 0)
             {
                 g.Alumnos.Add(a);
@@ -289,7 +286,6 @@ namespace ClasesInstanciables
             {
                 g.Instructores.Add(i);
             }
-
             return g;
         }
         #endregion

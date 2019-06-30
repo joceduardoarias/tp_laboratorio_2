@@ -1,0 +1,27 @@
+JORNADA: 
+CLASE DE Programacion POR ProgramacionNOMBRE COMPLETO: Lopez,Juan
+Nacionalidad:Argentino
+
+Legajo:1
+CLASE DEL DIA: 
+Programacion
+Laboratorio
+
+ALUMNOS
+NOMBRE COMPLETO: Lopez,Juan
+Nacionalidad:Argentino
+
+Legajo:1
+
+Estado Cuenta:Becado
+TOMA CLASE DE:Programacion
+
+NOMBRE COMPLETO: Gonzalez,Carlos
+Nacionalidad:Argentino
+
+Legajo:5
+
+Estado Cuenta:AlDia
+TOMA CLASE DE:Programacion
+
+
