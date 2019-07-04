@@ -121,11 +121,9 @@ namespace FrmPpal
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void MostrarToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.MostrarInformacion<Paquetes>((IMostrar<Paquetes>)lstEstadoEntregado.SelectedItem);
         }
-
-
     }
 }

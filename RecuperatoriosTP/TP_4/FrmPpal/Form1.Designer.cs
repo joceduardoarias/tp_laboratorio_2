@@ -34,8 +34,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.MostrarToolStripMenuItem = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.mostrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.lstEstadoEntregado = new System.Windows.Forms.ListBox();
@@ -47,9 +45,11 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textDireccion = new System.Windows.Forms.TextBox();
             this.mtxtTrackingID = new System.Windows.Forms.MaskedTextBox();
-            this.MostrarToolStripMenuItem.SuspendLayout();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Agregar
@@ -93,26 +93,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.ContextMenuStrip = this.MostrarToolStripMenuItem;
             this.label3.Location = new System.Drawing.Point(526, 62);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Entregado";
-            // 
-            // MostrarToolStripMenuItem
-            // 
-            this.MostrarToolStripMenuItem.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mostrarToolStripMenuItem1});
-            this.MostrarToolStripMenuItem.Name = "cmsListas";
-            this.MostrarToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
-            // 
-            // mostrarToolStripMenuItem1
-            // 
-            this.mostrarToolStripMenuItem1.Name = "mostrarToolStripMenuItem1";
-            this.mostrarToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
-            this.mostrarToolStripMenuItem1.Text = "Mostrar...";
-            this.mostrarToolStripMenuItem1.Click += new System.EventHandler(this.MostrarToolStripMenuItem1_Click);
             // 
             // listBox1
             // 
@@ -132,6 +117,7 @@
             // 
             // lstEstadoEntregado
             // 
+            this.lstEstadoEntregado.ContextMenuStrip = this.contextMenuStrip1;
             this.lstEstadoEntregado.FormattingEnabled = true;
             this.lstEstadoEntregado.Location = new System.Drawing.Point(529, 95);
             this.lstEstadoEntregado.Name = "lstEstadoEntregado";
@@ -208,6 +194,20 @@
             this.mtxtTrackingID.Size = new System.Drawing.Size(203, 20);
             this.mtxtTrackingID.TabIndex = 0;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Text = "Mostrar";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,10 +229,10 @@
             this.Name = "Form1";
             this.Text = "Correo UTN Jose.Arias.2A";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            this.MostrarToolStripMenuItem.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,8 +256,8 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.MaskedTextBox mtxtTrackingID;
         private System.Windows.Forms.TextBox textDireccion;
-        private System.Windows.Forms.ContextMenuStrip MostrarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mostrarToolStripMenuItem1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
 
